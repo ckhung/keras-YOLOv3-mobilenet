@@ -22,7 +22,9 @@ Preparation:
 
 Then inside the docker:
 ```
-cd git/keras-YOLOv3-mobilenet/
+pip3 install Pillow matplotlib opencv-python
+
+cd /srv/git/keras-YOLOv3-mobilenet/
 wget https://pjreddie.com/media/files/yolov3.weights -O ../models/yolov3.weights
 python3 convert.py yolov3.cfg ../../models/yolov3.weights ../../models/yolo.h5
 time python3 yolo_image.py --model_path ../../models/yolo.h5 --outdir ../../result/ ../../pictures/*.jpg
